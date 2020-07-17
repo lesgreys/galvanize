@@ -1,50 +1,38 @@
-## Pandas-EDA-Case-Study
+## Goal
+------
 
-#### There are four high-level goals of this case study:  
-* Gain experience using Pandas, Matplotlib, and Jupyter Notebooks 
-* Collaborate with your group on Github
-* Create plots and tables that illustrate interesting relationships in your dataset
-* Build your Github portfolio by summarizing your work in the README markdown file.
-
-#### Dataset Access
-Your group has three data options for this case study.  All are public domain and are presently hosted on Kaggle, the data science machine learning competition platform.  To access the datasets, register for a free Kaggle account here: https://www.kaggle.com/
-
-#### Dataset Descriptions
-
-* **Trending YouTube Video Statistics**  
-  YouTube (the video sharing website) maintains a list of the top-trending videos on its platform. This dataset includes several months of data on up to 200 daily trending YouTube videos from the US, Great Britain, Germany, Canada, France, and other countries.  Each region’s data is in a separate file. Data includes the video title, channel title, publish time, tags, views, likes and dislikes, description, and comment count.
-
-  The dataset is more fully described on Kaggle, and can be found [here.](https://www.kaggle.com/datasnaek/youtube-new)
-
-* **Explore Transit Lines All Over the World**  
-  This historical and international dataset documents how transit lines have evolved all over the world.  Besides time, number of lines, and line length, the dataset contains spatial locations that could be mapped using a geospatial library in Python like [GeoPandas](http://geopandas.org/index.html) or [Folium](https://python-visualization.github.io/folium/).  
-
-  The dataset is more fully described on Kaggle, and can be found [here.](https://www.kaggle.com/citylines/city-lines)   
-
-  This data can be difficult to parse for plotting on a map.  [Here is an example](https://www.kaggle.com/a03102030/visualization-for-tokyo-osaka-new-york) of how it might be parsed.
-
-* **Health Nutrition and Population Statistics**  
-  Compiled by the World Bank, this dataset includes 345 indicators, such as immunization rates, malnutrition prevalence, and vitamin A supplementation rates across 263 countries around the world. Data was collected on a yearly basis from 1960-2016.  
-
-  The dataset is more fully described on Kaggle, and can be found [here.](https://www.kaggle.com/theworldbank/health-nutrition-and-population-statistics) 
-
-  **Note:** This dataset in its raw form is in a challenging format, where columns are years and rows are features.  Teams should try to get the data into a workable format (features as columns) to perform graphical EDA as soon as possible.  
+Our intent was to analyze global transit rail systems and identify characteristics in the data that would allow to understand trends.
 
 
-#### Deliverable  
-This afternoon your group will present your results to the class from the README in your Github repository.  Your README markdown file should:  
-  * Clearly state the goal of your project (what were you exploring?)
-  * Describe the data.
-    * What features (columns) did you have to work with?
-    * What features were you interested in?  
-    * Were the features numerical/categorical/text?
-    * Was a lot of data missing?  If so, what did you do to handle it?
-    * How did features relate to each other, and the values that you were interested in?  
-    * Pictures are worth 1000s of words!
+### Exploratory Data Analysis
+----
 
-If you haven't written a Markdown file (the README.md) before, here's a [guide.](https://www.makeareadme.com/)  
-And here are some very nice examples:  
-[Traffic Accidents in Denver](https://github.com/johnherr/Traffic-Accidents-in-Denver)  
-[Provisions by Non-State Actors](https://github.com/gagejane/Terrorism-NonViolent)  
-[Purifying Hearthstone Data](https://github.com/NJacobsohn/Hearthstone-Data-Analysis)  
-[Automatic Brain Tumor Segmentation](https://github.com/naldeborgh7575/brain_segmentation)
+### The Data
+
+The data used was comprised of 6 data sets with following information; cities, lines, station lines, systems, tracks.
+
+
+Plotted avg track length per city ID, grouped by city ID.
+
+![Avg Track Length per City]('avg_track_length_per_cityID.PNG')
+
+
+Unsurprisingly, Tokyo comes it with far more stations than any other major city in the world, which reflects the ecosystem’s heavy use on trains as a primary mode of public transportation. Noticeably absent are major cities in populous countries such as India, Indonesia, Pakistan, and Nigeria.
+
+![Station per City]('station_count_by_city_bar_graph_2.png')
+
+Although we were not sure the exact meaning of systems, there was a lot of overlap between the number of systems and stations per country. Tokyo had the most of amount of systems. Followed by Glasgow, Paris, Nantes, & Valencia. Europe held most of the spots within the top ten category. 
+
+![Systems per City]('systems_per_city.png')
+
+
+Here we take a look at the top ten per city. 
+
+![Top Ten Systems per City]('top_ten_systems_per_city.png')
+
+### Conclusion
+--------
+
+In conclusion, the team spent a lot of the time trying to wrangle the data in a more comprehensive format. The seperation of the all the tables created some complexities that segmented the information and made it difficult to combine information as we originally wanted.
+
+We attempted to use the GPS coordinate systems to plot the lines but were unable to achieve the desired result. We would need some extra time to become familiar with the geospacial libraries that would allow us to plot the station lines. 
