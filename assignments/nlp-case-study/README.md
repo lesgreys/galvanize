@@ -14,8 +14,6 @@ Working with a unique dataset such as UFO sightings, we find that higher weight 
 
 ![goals](images/ourgoal.png)
 
-![edatitle](images/edatitle.png)
-
 ![shapes](images/shapes.png)
 
 ![ufopermonth](images/ufopermonth.png)
